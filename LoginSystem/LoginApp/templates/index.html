@@ -1,0 +1,13 @@
+{% extends 'navbar.html' %}
+{% block content %}
+{% if user.is_authenticated %}
+
+<div class="alert alert-primary" role="alert">
+    <h6>You are successfully logged in </h6>
+</div>
+<h5 class="container">Welcome, <b>{{user.username}}</b></h5>
+{% else %}
+
+<h5 class="container p-5">Welcome, Please login to explore...</h5>
+{% endif %}
+{% endblock %}
